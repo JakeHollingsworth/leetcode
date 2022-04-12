@@ -13,7 +13,6 @@ class Solution:
         last_added = 0
         while k > 0:
             if not nums:
-                print(tot, last_added)
                 return tot - 2 * last_added * (k % 2)
             elif abs(nums[0]) >= abs(nums[-1]):
                 n = nums.pop(0)
