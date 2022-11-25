@@ -1,0 +1,17 @@
+'''
+You are given an integer array nums with the following properties:
+
+nums.length == 2 * n.
+nums contains n + 1 unique elements.
+Exactly one element of nums is repeated n times.
+Return the element that is repeated n times.
+'''
+class Solution:
+    def repeatedNTimes(self, nums: List[int]) -> int:
+        duped = set([])
+        for n in nums:
+            if n in duped:
+                return n
+            else:
+                duped.add(n)
+        return None
